@@ -9,7 +9,7 @@ This is the first step towards building your first full web application: the Air
 ## Usage
 - First, clone the repository into your directory.
     ```
-    $ git clone https://github.com/lisale0/AirBnB_clone
+    $ git clone https://github.com/Eleazarovich/AirBnB_clone
     ```
 
 - Run the executable `./console.py`
@@ -96,8 +96,7 @@ $
 No known bugs at this time. 
 
 ## Authors
-**Eleazar Nhamuave**
-**Miss Prisca Ekhaguere**
+**Eleazar Nhamuave | Miss Prisca Ekhaguere**
 
 ## License
 Public Domain. No copy write protection.
