@@ -9,12 +9,16 @@ class BaseModel:
     """BaseModel defines all common attributes/methods for other classes"""
     def __init__(self, *args, **kwargs):
         """initialization method"""
-        if kwargs:
-            for k, v in kwargs.items():
-                if k == "created_at" or k == "updated_at":
-                    v = datetime.strptime(v, "%Y-%m-%dT%H:%M:%S.%f")
-                if '__class__' != k:
-                    setattr(self, k, v)
+        if kwargs is not None and kwargs != {}:
+            for k in kwargs:
+                if k == "created_at":
+                    self.__dict__["created_at"] = datetime.strptime(
+                        kwargs["created_at"], "%Y-%m-%dT%H:%M:%S.%f")
+                elif k == "updated_at":
+                    self.__dict__["updated_at"] = datetime.strptime(
+                        kwargs["updated_at"], "%Y-%m-%dT%H:%M:%S.%f")
+                else:
+                    self.__dict__[k] = kwargs[k]
         else:
             self.id = str(uuid4())
             self.created_at = datetime.now()
