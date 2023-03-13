@@ -96,7 +96,7 @@ $
 No known bugs at this time. 
 
 ## Authors
-**Eleazar Nhamuave | Miss Prisca Ekhaguere**
+**Eleazar Nhamuave**
 
 ## License
 Public Domain. No copy write protection.
