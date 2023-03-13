@@ -18,8 +18,8 @@ class FileStorage:
 
     def new(self, obj):
         """sets in __objects the obj with key <obj class name>.id"""
-        k = "{}.{}".format(type(obj).__name__, obj.id)
-        FileStorage.__objects[k] = obj
+        key = "{}.{}".format(type(obj).__name__, obj.id)
+        FileStorage.__objects[key] = obj
 
     def save(self):
         """serializes __objects to the JSON file (path: __file_path)"""
@@ -78,9 +78,9 @@ class FileStorage:
                       "longitude": float,
                       "amenity_ids": list},
             "Review":
-                     {"place_id": str,
-                      "user_id": str,
-                      "text": str}
+            {"place_id": str,
+                         "user_id": str,
+                         "text": str}
         }
         return attributes
 
